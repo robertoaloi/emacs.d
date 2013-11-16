@@ -9,14 +9,19 @@ https://github.com/borlum/emacs.d
 Clone the repository:
 
 ```
-$ cd /YOUR/FAVOURITE/PATH
+$ cd ~/Projects
 $ git clone https://github.com/robertoaloi/emacs.d
 ```
 
-Load the repository from your emacs configuration
+Append the following to your `.emacs` file:
 
 ```
-$ echo '(load "/YOUR/FAVOURITE/PATH/emacs.d")' >> ~/.emacs
+(setq pigeon-root "~/Projects/emacs.d/")
+(setq pigeon-edts-root "~/Projects/edts/")
+(setq pigeon-erlang-bin "/usr/local/Cellar/erlang/R16B/bin")
+(setq pigeon-erlang-doc-root "~/docs/erlang/R16B/")
+(setq pigeon-default-browser "google-chrome")
+(load (concat pigeon-root "init.el"))
 ```
 
 ## Features
@@ -44,6 +49,16 @@ $ echo '(load "/YOUR/FAVOURITE/PATH/emacs.d")' >> ~/.emacs
 * Answer `y/n` instead of `yes/no`
 * Jump to other-window after splits (C-x 2, C-x 3)
 * Inhibit menu, tool and scroll bars
+
+### Erlang
+
+* Activate official erlang-mode
+* Activate EDTS (Erlang Development Tool Suite)
+* Open documentation for erlang modules in a web browser
+
+### Git
+
+* Blame author of a specific line
 
 ## Author
 
