@@ -9,5 +9,6 @@
                 pigeon-ui
                 pigeon-theme
                 pigeon-erlang
-                pigeon-git))
+                pigeon-git
+                pigeon-ido))
   (require file))

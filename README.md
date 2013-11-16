@@ -64,6 +64,11 @@ Append the following to your `.emacs` file:
 
 * Blame author of a specific line
 
+### IDO
+
+* Activate IDO-mode (Interactively Do Things)
+* Activate IDO-mode for M-x (old M-x available as C-c C-c M-x)
+
 ## Author
 
 Roberto Aloi (@robertoaloi)
