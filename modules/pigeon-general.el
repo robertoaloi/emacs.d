@@ -3,7 +3,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Store backup files in a common place
-(setq backup-directory-alist `(("." . "~/.emacs-backups")))
+(setq backup-directory-alist '(("." . "~/.emacs-backups")))
 
 ;; Inhibit tabs
 (setq-default indent-tabs-mode nil)
@@ -25,8 +25,17 @@
 (global-hl-line-mode t)
 (set-face-background hl-line-face "gray13")
 
-;; Show line numbers
-(global-linum-mode 1)
+;; Save history between sessions
+(savehist-mode 1)
+
+;; Enable editing of remote files (via TRAMP)
+;; This also simplifies editing files as root
+;; C-x C-f /sudo::/path/to/file
+(require 'tramp)
+
+;; Set default browser
+(setq browse-url-browser-function 'browse-url-generic
+      browse-url-generic-program pigeon-default-browser)
 
 ;; Provide feature
 (provide 'pigeon-general)

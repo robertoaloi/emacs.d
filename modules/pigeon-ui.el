@@ -37,5 +37,11 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
+;; Cut and paste using the clipboard
+(setq x-select-enable-clipboard t)
+
+;; Show line numbers
+(global-linum-mode 1)
+
 ;; Provide feature
 (provide 'pigeon-ui)

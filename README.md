@@ -34,7 +34,9 @@ Append the following to your `.emacs` file:
 * Show trailing whitespaces
 * Highlight lines longer than 80 characters
 * Highlight current line
-* Show line numbers
+* Save history between sessions
+* Enable editing of remote files (via TRAMP)
+* Set default browser
 
 ### Packages
 
@@ -49,6 +51,8 @@ Append the following to your `.emacs` file:
 * Answer `y/n` instead of `yes/no`
 * Jump to other-window after splits (C-x 2, C-x 3)
 * Inhibit menu, tool and scroll bars
+* Cut and paste using the clipboard
+* Show line numbers
 
 ### Erlang
 
