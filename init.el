@@ -10,5 +10,6 @@
                 pigeon-theme
                 pigeon-erlang
                 pigeon-git
-                pigeon-ido))
+                pigeon-ido
+                pigeon-jabber))
   (require file))

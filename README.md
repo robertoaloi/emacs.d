@@ -69,6 +69,11 @@ Append the following to your `.emacs` file:
 * Activate IDO-mode (Interactively Do Things)
 * Activate IDO-mode for M-x (old M-x available as C-c C-c M-x)
 
+### Jabber
+
+* Activate official Jabber client
+* Do not show avatars in Jabber roster
+* Simplify Jabber roster
 ## Author
 
 Roberto Aloi (@robertoaloi)
