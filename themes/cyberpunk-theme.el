@@ -161,7 +161,7 @@
      ((,class (:foreground ,cyberpunk-gray-7
                            :background ,cyberpunk-gray-6
                            :box (:line-width -1)))))
-   `(region ((,class (:background ,cyberpunk-red-5))))
+   `(region ((,class (:background ,cyberpunk-bg-1))))
    `(secondary-selection ((,class (:background ,cyberpunk-bg+2))))
    `(trailing-whitespace ((,class (:background ,cyberpunk-red))))
    `(vertical-border ((,class (:foreground ,cyberpunk-gray-5 :background ,cyberpunk-black))))
@@ -169,17 +169,17 @@
    ;;; font lock
    `(font-lock-builtin-face ((,class (:foreground ,cyberpunk-orange-2))))
    `(font-lock-comment-face ((,class (:foreground ,cyberpunk-gray-2 :italic t))))
-   ;; `(font-lock-comment-delimiter-face ((,class (:foreground ,cyberpunk-green)))) 
+   `(font-lock-comment-delimiter-face ((,class (:foreground ,cyberpunk-green-2))))
    `(font-lock-constant-face ((,class (:foreground ,cyberpunk-blue-5))))
    ;; `(font-lock-doc-face ((,class (:foreground ,cyberpunk-green+1))))
-   `(font-lock-doc-string-face ((,class (:foreground ,cyberpunk-orange-1))))
-   `(font-lock-function-name-face ((,class (:foreground ,cyberpunk-pink-1))))
+   `(font-lock-doc-string-face ((,class (:foreground ,cyberpunk-orange))))
+   `(font-lock-function-name-face ((,class (:foreground ,cyberpunk-red-3))))
    `(font-lock-keyword-face ((,class (:foreground ,cyberpunk-yellow-1))))
    ;; `(font-lock-negation-char-face ((,class (:foreground ,cyberpunk-fg))))
-   `(font-lock-preprocessor-face ((,class (:foreground ,cyberpunk-gray-3))))
-   `(font-lock-string-face ((,class (:foreground ,cyberpunk-green+1))))
-   `(font-lock-type-face ((,class (:foreground ,cyberpunk-yellow-3))))
-   `(font-lock-variable-name-face ((,class (:foreground ,cyberpunk-yellow-3))))
+   `(font-lock-preprocessor-face ((,class (:foreground ,cyberpunk-blue-5))))
+   `(font-lock-string-face ((,class (:foreground ,cyberpunk-orange-2))))
+   `(font-lock-type-face ((,class (:foreground ,cyberpunk-green+1))))
+   `(font-lock-variable-name-face ((,class (:foreground ,cyberpunk-yellow))))
    `(font-lock-warning-face ((,class (:foreground ,cyberpunk-pink))))
    `(font-lock-reference-face ((,class (:foreground ,cyberpunk-gray))))
    `(font-lock-regexp-grouping-backslash ((,class (:foreground ,cyberpunk-yellow-4))))
@@ -265,6 +265,9 @@
    `(ediff-odd-diff-A ((,class (:foreground ,cyberpunk-black :background ,cyberpunk-gray-3))))
    `(ediff-odd-diff-B ((,class (:foreground ,cyberpunk-black :background ,cyberpunk-gray-4))))
    `(ediff-odd-diff-C ((,class (:foreground ,cyberpunk-black :background ,cyberpunk-gray))))
+
+   ;; erlang-mode
+   `(erlang-font-lock-exported-function-name-face ((,class (:inherit font-lock-function-name :foreground ,cyberpunk-yellow))))
 
    ;; ert
    `(ert-test-result-expected ((,class (:foreground ,cyberpunk-green+4 :background ,cyberpunk-bg))))
@@ -613,7 +616,7 @@
    `(whitespace-tab ((,class (:background ,cyberpunk-bg :foreground ,cyberpunk-red))))
    `(whitespace-newline ((,class (:foreground ,cyberpunk-bg+1))))
    `(whitespace-trailing ((,class (:foreground ,cyberpunk-red :background ,cyberpunk-bg))))
-   `(whitespace-line ((,class (:background ,cyberpunk-bg-05 :foreground ,cyberpunk-magenta))))
+   `(whitespace-line ((,class (:background ,cyberpunk-bg-05))))
    `(whitespace-space-before-tab ((,class (:background ,cyberpunk-orange :foreground ,cyberpunk-orange))))
    `(whitespace-indentation ((,class (:background ,cyberpunk-yellow :foreground ,cyberpunk-red))))
    `(whitespace-empty ((,class (:background ,cyberpunk-yellow :foreground ,cyberpunk-red))))
