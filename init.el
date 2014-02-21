@@ -11,5 +11,6 @@
                 pigeon-erlang
                 pigeon-git
                 pigeon-ido
-                pigeon-jabber))
+                pigeon-jabber
+                pigeon-markdown))
   (require file))
