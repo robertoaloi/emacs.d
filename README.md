@@ -17,7 +17,6 @@ Append the following to your `.emacs` file:
 
 ```
 (setq pigeon-root "~/Projects/emacs.d/")
-(setq pigeon-edts-root "~/Projects/edts/")
 (setq pigeon-erlang-bin "/usr/local/Cellar/erlang/R16B/bin")
 (setq pigeon-erlang-doc-root "~/docs/erlang/R16B/")
 (setq pigeon-erlang-eqc-dir "~/Projects/eqc/eqc-1.30.5/")
