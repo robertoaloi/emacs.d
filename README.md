@@ -17,9 +17,9 @@ Append the following to your `.emacs` file:
 
 ```
 (setq pigeon-root "~/Projects/emacs.d/")
-(setq pigeon-edts-root "~/Projects/edts/")
 (setq pigeon-erlang-bin "/usr/local/Cellar/erlang/R16B/bin")
 (setq pigeon-erlang-doc-root "~/docs/erlang/R16B/")
+(setq pigeon-erlang-eqc-dir "~/Projects/eqc/eqc-1.30.5/")
 (setq pigeon-default-browser "google-chrome")
 (load (concat pigeon-root "init.el"))
 ```
@@ -59,6 +59,10 @@ Append the following to your `.emacs` file:
 * Activate official erlang-mode
 * Activate EDTS (Erlang Development Tool Suite)
 * Open documentation for erlang modules in a web browser
+
+### Erlang QuickCheck
+
+* Setup Emacs Mode for EQC
 
 ### Git
 

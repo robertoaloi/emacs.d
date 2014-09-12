@@ -7,8 +7,7 @@
 
 ;; Activate EDTS (Erlang Development Tool Suite)
 ;; Ref: https://github.com/tjarvstrand/edts
-(add-to-list 'exec-path pigeon-erlang-bin)
-(add-to-list 'load-path pigeon-edts-root)
+(package-require 'edts)
 (require 'edts-start)
 
 ;; Open documentation for erlang modules in a web browser

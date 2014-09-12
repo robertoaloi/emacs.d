@@ -9,6 +9,7 @@
                 pigeon-ui
                 pigeon-theme
                 pigeon-erlang
+                pigeon-erlang-eqc
                 pigeon-git
                 pigeon-ido
                 pigeon-jabber
