@@ -5,6 +5,9 @@
 ;; Activate official erlang-mode
 (package-require 'erlang)
 
+;; Add Erlang to the path
+(add-to-list 'exec-path pigeon-erlang-bin)
+
 ;; Activate EDTS (Erlang Development Tool Suite)
 ;; Ref: https://github.com/tjarvstrand/edts
 (package-require 'edts)
