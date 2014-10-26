@@ -21,6 +21,8 @@ Append the following to your `.emacs` file:
 (setq pigeon-erlang-doc-root "~/docs/erlang/R16B/")
 (setq pigeon-erlang-eqc-dir "~/Projects/eqc/eqc-1.30.5/")
 (setq pigeon-default-browser "google-chrome")
+(setq pigeon-python-mode-path "~/Projects/python-mode")
+(setq pigeon-python-pyflakes-path "/usr/local/bin")
 (load (concat pigeon-root "init.el"))
 ```
 
@@ -78,6 +80,12 @@ Append the following to your `.emacs` file:
 * Activate official Jabber client
 * Do not show avatars in Jabber roster
 * Simplify Jabber roster
+
+### Python
+
+* Install python-mode
+* Activate flymake for python-mode (using pyflakes)
+
 ## Author
 
 Roberto Aloi (@robertoaloi)

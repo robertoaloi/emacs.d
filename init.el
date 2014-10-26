@@ -13,5 +13,6 @@
                 pigeon-git
                 pigeon-ido
                 pigeon-jabber
-                pigeon-markdown))
+                pigeon-markdown
+                pigeon-python))
   (require file))
