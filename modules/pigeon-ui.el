@@ -43,5 +43,11 @@
 ;; Show line numbers
 (global-linum-mode 1)
 
+;; Bind Ctrl + Arrow keys (so they work inside Tmux)
+(global-set-key "\M-[1;5A"    'backward-paragraph) ; Ctrl + down
+(global-set-key "\M-[1;5B"    'forward-paragraph)  ; Ctrl + up
+(global-set-key "\M-[1;5C"    'forward-word)       ; Ctrl + right
+(global-set-key "\M-[1;5D"    'backward-word)      ; Ctrl + left
+
 ;; Provide feature
 (provide 'pigeon-ui)
