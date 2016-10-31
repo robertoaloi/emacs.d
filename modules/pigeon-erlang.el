@@ -40,5 +40,8 @@
   (browse-url-of-file module))
 (local-set-key (kbd "C-e d") 'browse-erlang-doc)
 
+;; Run all prog-mode hooks when using erlang-mode
+(add-hook 'erlang-mode-hook (lambda () (run-hooks 'prog-mode-hook)))
+
 ;; Provide feature
 (provide 'pigeon-erlang)
