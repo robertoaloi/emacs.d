@@ -14,5 +14,7 @@
                 pigeon-ido
                 pigeon-jabber
                 pigeon-markdown
-                pigeon-python))
+                pigeon-python
+                pigeon-sh
+                pigeon-yaml))
   (require file))
