@@ -86,6 +86,14 @@ Append the following to your `.emacs` file:
 * Install python-mode
 * Activate flymake for python-mode (using pyflakes)
 
+### Markdown
+
+* Enable automatic refill via `refill-mode`
+* Enable spell-checking via `ispell` and `flyspell-mode` (requires the
+  `ispell` OS package to be installed).`
+* Specify justification using `M-x set-justification-*`
+* Run spell-checker using `M-x ispell`
+
 ## Author
 
 Roberto Aloi (@robertoaloi)
