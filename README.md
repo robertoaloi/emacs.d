@@ -88,7 +88,6 @@ Append the following to your `.emacs` file:
 
 ### Markdown
 
-* Enable automatic refill via `refill-mode`
 * Enable spell-checking via `ispell` and `flyspell-mode` (requires the
   `ispell` OS package to be installed).`
 * Specify justification using `M-x set-justification-*`
