@@ -43,5 +43,9 @@
 ;; Run all prog-mode hooks when using erlang-mode
 (add-hook 'erlang-mode-hook (lambda () (run-hooks 'prog-mode-hook)))
 
+;; When using `M-x rgrep`, exclude some Erlang-specific directories
+(setq grep-find-ignored-directories
+      (append grep-find-ignored-directories '("_build" "ebin")))
+
 ;; Provide feature
 (provide 'pigeon-erlang)

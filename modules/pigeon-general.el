@@ -37,5 +37,8 @@
 (setq browse-url-browser-function 'browse-url-generic
       browse-url-generic-program pigeon-default-browser)
 
+;; Require grep so that other modules can override ignored dirs
+(require 'grep)
+
 ;; Provide feature
 (provide 'pigeon-general)
