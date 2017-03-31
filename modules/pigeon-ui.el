@@ -42,6 +42,11 @@
 
 ;; Show line numbers
 (global-linum-mode 1)
+(setq linum-format "%4d \u2502")
+
+;; Highlight line numbers
+(package-require 'hlinum)
+(hlinum-activate)
 
 ;; Bind Ctrl + Arrow keys (so they work inside Tmux)
 (global-set-key "\M-[1;5A"    'backward-paragraph) ; Ctrl + down
