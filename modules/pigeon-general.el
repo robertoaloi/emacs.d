@@ -40,5 +40,12 @@
 ;; Require grep so that other modules can override ignored dirs
 (require 'grep)
 
+;; Define a function to kill all other buffers
+(defun kill-other-buffers ()
+    "Kill all other buffers."
+    (interactive)
+    (mapc 'kill-buffer
+          (delq (current-buffer)
+                (remove-if-not 'buffer-file-name (buffer-list)))))
 ;; Provide feature
 (provide 'pigeon-general)
