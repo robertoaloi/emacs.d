@@ -6,6 +6,7 @@
 
 (dolist (file '(pigeon-packages
                 pigeon-general
+                pigeon-org
                 pigeon-ui
                 pigeon-theme
                 pigeon-erlang
