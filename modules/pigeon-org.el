@@ -24,5 +24,12 @@
 ;; Add time information when a task is completed
 (setq org-log-done 'time)
 
+;; Capture settings
+(setq org-default-notes-file "~/org/notes.org")
+(define-key global-map "\C-cc" 'org-capture)
+(setq org-capture-templates
+      '(("t" "todo" entry (file+headline "~/org/todo.org" "Todos")
+         "* TODO %?")))
+
 ;; Provide feature
 (provide 'pigeon-org)
