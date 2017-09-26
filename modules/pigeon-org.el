@@ -43,6 +43,24 @@
          (file+headline (concat pigeon-agenda-dir "/todos.org") "TODOs")
          "* TODO %?"
          )
+        ("s"
+         "scheduled"
+         entry
+         (file org-default-notes-file)
+         "* TODO %?\nSCHEDULED: %(format-time-string \"%<<%Y-%m-%d %a -1d>>\")\n"
+         )
+        ("d"
+         "deadline"
+         entry
+         (file org-default-notes-file)
+         "* TODO %?\nDEADLINE: %(format-time-string \"%<<%Y-%m-%d %a>>\")\n"
+         )
+        ("b"
+         "break"
+         entry
+         (file (concat pigeon-agenda-dir "/breaks.org"))
+         "* TODO %?\n"
+         )
         ("h"
          "habit"
          entry
