@@ -41,7 +41,7 @@
 (setq x-select-enable-clipboard t)
 
 ;; Show line numbers
-(global-linum-mode 1)
+(add-hook 'prog-mode-hook 'linum-mode)
 (setq linum-format "%4d \u2502")
 
 ;; Highlight line numbers
