@@ -40,8 +40,8 @@
   (browse-url-of-file module))
 (local-set-key (kbd "C-e d") 'browse-erlang-doc)
 
-;; Run all prog-mode hooks when using erlang-mode
-(add-hook 'erlang-mode-hook (lambda () (run-hooks 'prog-mode-hook)))
+;; Set 2 spaces for indentation
+(setq erlang-indent-level 2)
 
 ;; When using `M-x rgrep`, exclude some Erlang-specific directories
 (setq grep-find-ignored-directories
