@@ -3,7 +3,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Store backup files in a common place
-(setq backup-directory-alist '(("." . "~/.emacs-backups")))
+(setq backup-directory-alist `((".*" . ,pigeon-backup-dir)))
+(setq auto-save-file-name-transforms `((".*" ,pigeon-backup-dir t)))
 
 ;; Inhibit tabs
 (setq-default indent-tabs-mode nil)
