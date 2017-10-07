@@ -13,7 +13,6 @@
                 pigeon-erlang-eqc
                 pigeon-git
                 pigeon-ido
-                pigeon-jabber
                 pigeon-markdown
                 pigeon-python
                 pigeon-sh
