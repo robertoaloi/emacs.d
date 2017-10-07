@@ -2,6 +2,14 @@
 ;; General                                                  ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; Define variables used in the current module
+(defvar pigeon-backup-dir
+  "~/.emacs-backups"
+  "Directory where all emacs backup files will be stored")
+(defvar pigeon-default-browser
+  "google-chrome"
+  "Default Browser")
+
 ;; Store backup files in a common place
 (setq backup-directory-alist `((".*" . ,pigeon-backup-dir)))
 (setq auto-save-file-name-transforms `((".*" ,pigeon-backup-dir t)))

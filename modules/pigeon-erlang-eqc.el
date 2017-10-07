@@ -2,8 +2,16 @@
 ;; Erlang QuickCheck                                        ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; Define variables used in the current module
+(defvar pigeon-erlang-eqc-version
+  "1.35.1"
+  "Version of Erlang QuickCheck installed")
+(defvar pigeon-erlang-eqc-dir
+  (concat pigeon-erlang-root-dir "/lib/erlang/lib/eqc-" pigeon-erlang-eqc-version)
+  "Path to the Erlang QuickCheck application")
+
 ;; Configure EQC Emacs Mode
-(add-to-list 'load-path (concat pigeon-erlang-eqc-dir "emacs/"))
+(add-to-list 'load-path (concat pigeon-erlang-eqc-dir "/emacs/"))
 (autoload 'eqc-erlang-mode-hook "eqc-ext" "EQC Mode" t)
 (add-hook 'erlang-mode-hook 'eqc-erlang-mode-hook)
 (setq eqc-max-menu-length 30)

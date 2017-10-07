@@ -2,6 +2,14 @@
 ;; Org Mode                                                 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; Define variables used in the current module
+(defvar pigeon-agenda-home-dir
+  "~/agenda-home"
+  "Path to the directory containing your home agenda")
+(defvar pigeon-agenda-work-dir
+  "~/agenda-work"
+  "Path to the directory containing your work agenda")
+
 ;; Set Agenda files
 (setq org-agenda-files (list pigeon-agenda-home-dir pigeon-agenda-work-dir))
 

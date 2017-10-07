@@ -2,11 +2,19 @@
 ;; Erlang                                                   ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; Define variables used in the current module
+(defvar pigeon-erlang-root-dir
+  "~/otp/18.3"
+  "Path to the Erlang installation path")
+(defvar pigeon-erlang-doc-root
+  "~/otp-docs/18.3"
+  "Path to the local Erlang OTP documentation (HTTP format)")
+
 ;; Activate official erlang-mode
 (package-require 'erlang)
 
 ;; Add Erlang to the path
-(add-to-list 'exec-path pigeon-erlang-bin)
+(add-to-list 'exec-path (concat pigeon-erlang-root-dir "/bin"))
 
 ;; Activate EDTS (Erlang Development Tool Suite)
 ;; Ref: https://github.com/tjarvstrand/edts
@@ -24,7 +32,7 @@
            (append
             (file-expand-wildcards
              (concat erlang-doc-root-dir
-                     "lib/*/doc/html/*.html"))))
+                     "/lib/*/doc/html/*.html"))))
           (completion-table
            (mapcar
             (lambda (file)
