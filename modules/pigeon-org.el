@@ -64,7 +64,7 @@
         ("h"
          "habit"
          entry
-         (file (concat pigeon-agenda-dir "/habits/habits.org"))
+         (file (concat pigeon-agenda-dir "/habits.org"))
          "* TODO %?\nSCHEDULED: %(format-time-string \"%<<%Y-%m-%d %a .+1d/3d>>\")\n:PROPERTIES:\n:STYLE: habit\n:END:\n"
          )
         ))
