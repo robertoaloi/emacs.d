@@ -1,9 +1,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Org Mode                                                  ;;
+;; Org Mode                                                 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Set Agenda files
-(setq org-agenda-files (list pigeon-agenda-dir))
+(setq org-agenda-files (list pigeon-agenda-home-dir pigeon-agenda-work-dir))
 
 ;; Enable habit tracking
 (setq org-modules '(org-habit))
@@ -34,37 +34,81 @@
 (setq org-use-effective-time t)
 
 ;; Capture settings
-(setq org-default-notes-file (concat pigeon-agenda-dir "/notes.org"))
 (define-key global-map "\C-cc" 'org-capture)
 (setq org-capture-templates
-      '(("t"
-         "todo"
+      '(("t" "Todo")
+        ("th"
+         "Todo at Home"
          entry
-         (file+headline (concat pigeon-agenda-dir "/todos.org") "TODOs")
+         (file+headline
+          (concat pigeon-agenda-home-dir "/todos.org") "Home")
          "* TODO %?"
          )
-        ("s"
-         "scheduled"
+        ("tw"
+         "Todo at Work"
          entry
-         (file org-default-notes-file)
+         (file+headline
+          (concat pigeon-agenda-work-dir "/todos.org") "Work")
+         "* TODO %?"
+         )
+        ("s" "Scheduled")
+        ("sh"
+         "Scheduled at Home"
+         entry
+         (file+headline
+          (concat pigeon-agenda-home-dir "/scheduled.org") "Home")
          "* TODO %?\nSCHEDULED: %(format-time-string \"%<<%Y-%m-%d %a -0d>>\")\n"
          )
-        ("d"
-         "deadline"
+        ("sw"
+         "Scheduled at Work"
          entry
-         (file org-default-notes-file)
+         (file+headline
+          (concat pigeon-agenda-work-dir "/scheduled.org") "Work")
+         "* TODO %?\nSCHEDULED: %(format-time-string \"%<<%Y-%m-%d %a -0d>>\")\n"
+         )
+        ("d" "Deadline")
+        ("dh"
+         "Deadline at Home"
+         entry
+         (file+headline
+          (concat pigeon-agenda-home-dir "/deadlines.org") "Home")
          "* TODO %?\nDEADLINE: %(format-time-string \"%<<%Y-%m-%d %a>>\")\n"
          )
-        ("b"
-         "break"
+        ("dw"
+         "Deadline at Work"
          entry
-         (file+headline (concat pigeon-agenda-dir "/breaks.org"), "Breaks")
+         (file+headline
+          (concat pigeon-agenda-work-dir "/deadlines.org") "Work")
+         "* TODO %?\nDEADLINE: %(format-time-string \"%<<%Y-%m-%d %a>>\")\n"
+         )
+        ("b" "Breaks")
+        ("bh"
+         "Break at Home"
+         entry
+         (file+headline
+          (concat pigeon-agenda-home-dir "/breaks.org") "Home")
          "* TODO %?\n"
          )
-        ("h"
-         "habit"
+        ("bw"
+         "Break at Work"
          entry
-         (file (concat pigeon-agenda-dir "/habits.org"))
+         (file+headline
+          (concat pigeon-agenda-work-dir "/breaks.org") "Work")
+         "* TODO %?\n"
+         )
+        ("h" "Habit")
+        ("hh"
+         "Habit at Home"
+         entry
+         (file+headline
+          (concat pigeon-agenda-home-dir "/habits.org") "Home")
+         "* TODO %?\nSCHEDULED: %(format-time-string \"%<<%Y-%m-%d %a .+1d/3d>>\")\n:PROPERTIES:\n:STYLE: habit\n:END:\n"
+         )
+        ("hw"
+         "Habit at Work"
+         entry
+         (file+headline
+          (concat pigeon-agenda-work-dir "/habits.org") "Work")
          "* TODO %?\nSCHEDULED: %(format-time-string \"%<<%Y-%m-%d %a .+1d/3d>>\")\n:PROPERTIES:\n:STYLE: habit\n:END:\n"
          )
         ))
