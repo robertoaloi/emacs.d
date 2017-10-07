@@ -47,7 +47,7 @@
          "scheduled"
          entry
          (file org-default-notes-file)
-         "* TODO %?\nSCHEDULED: %(format-time-string \"%<<%Y-%m-%d %a -1d>>\")\n"
+         "* TODO %?\nSCHEDULED: %(format-time-string \"%<<%Y-%m-%d %a -0d>>\")\n"
          )
         ("d"
          "deadline"
