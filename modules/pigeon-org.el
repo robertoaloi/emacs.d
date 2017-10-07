@@ -58,7 +58,7 @@
         ("b"
          "break"
          entry
-         (file (concat pigeon-agenda-dir "/breaks.org"))
+         (file+headline (concat pigeon-agenda-dir "/breaks.org"), "Breaks")
          "* TODO %?\n"
          )
         ("h"
