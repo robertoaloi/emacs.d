@@ -4,8 +4,7 @@
 
 (add-to-list 'load-path (concat pigeon-root "modules"))
 
-(dolist (file '(pigeon-packages
-                pigeon-general
+(dolist (file '(pigeon-general
                 pigeon-org
                 pigeon-ui
                 pigeon-theme

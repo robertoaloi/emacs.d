@@ -13,22 +13,24 @@ $ cd ~/Projects
 $ git clone https://github.com/robertoaloi/emacs.d
 ```
 
-Append the following to your `.emacs` file:
+Then add  to your `.emacs` file:
 
 ```
-(setq pigeon-root "~/Projects/emacs.d/")
-(setq pigeon-erlang-bin "/usr/local/Cellar/erlang/R16B/bin")
-(setq pigeon-erlang-doc-root "~/docs/erlang/R16B/")
-(setq pigeon-erlang-eqc-dir "~/Projects/eqc/eqc-1.30.5/")
-(setq pigeon-default-browser "google-chrome")
-(setq pigeon-python-mode-path "~/Projects/python-mode")
-(setq pigeon-python-pyflakes-path "/usr/local/bin")
+(setq pigeon-root "/path/to/the/emacs.d/repo")
 (load (concat pigeon-root "init.el"))
 ```
 
 ## Features
 
+My emacs.d configuration is split in modules.
+
+For each module follows a description of the major features provided
+and possible customization.
+
 ### General
+
+This module contains my Emacs customization which are not specific to
+any programming mode.
 
 * Store backup files in a common place (~/.emacs-backups)
 * Inhibit tabs
