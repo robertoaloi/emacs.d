@@ -124,5 +124,18 @@
 ;; Set files to use for refile
 (setq org-refile-targets '((org-agenda-files :maxlevel . 1)))
 
+;; Configure the default timeclock report tables
+;; Based on: https://emacs.stackexchange.com/questions/8228
+(defun pigeon-org-clocktable-notodo (ipos tables params)
+  (cl-loop for tbl in tables
+           for entries = (nth 2 tbl)
+           do (cl-loop for entry in entries
+                       for headline = (nth 1 entry)
+                       do (setq headline (replace-regexp-in-string "TODO \\|DONE " "* " headline))
+                       do (setcar (nthcdr 1 entry) headline)))
+  (org-clocktable-write-default ipos tables params))
+(setq org-agenda-clockreport-parameter-plist
+      '(:link t :maxlevel 2 :fileskip0 t :indent nil :formatter pigeon-org-clocktable-notodo))
+
 ;; Provide feature
 (provide 'pigeon-org)
