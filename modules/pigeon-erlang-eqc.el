@@ -4,7 +4,7 @@
 
 ;; Define variables used in the current module
 (defvar pigeon-erlang-eqc-version
-  "1.35.1"
+  "1.42.1"
   "Version of Erlang QuickCheck installed")
 (defvar pigeon-erlang-eqc-dir
   (concat pigeon-erlang-root-dir "/lib/erlang/lib/eqc-" pigeon-erlang-eqc-version)
