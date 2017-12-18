@@ -2,11 +2,9 @@
 ;; Theme                                                              ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; Add custom themes directory to path
-(add-to-list 'custom-theme-load-path (concat pigeon-root "themes"))
-
-;; Load material theme
-(load-theme 'material t)
+;; Install Tomorrow themes and activate the day one
+(package-require 'color-theme-sanityinc-tomorrow)
+(load-theme 'sanityinc-tomorrow-day t)
 
 ;; Install rainbow package, to colour HEX specs
 (package-require 'rainbow-mode)
