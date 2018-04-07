@@ -56,5 +56,14 @@
     (mapc 'kill-buffer
           (delq (current-buffer)
                 (remove-if-not 'buffer-file-name (buffer-list)))))
+
+;; Don't wrap lines in grep-mode.
+;; This avoids that the grep command takes a big portion of the buffer.
+;; To temporarily switch to wrapped lines: M-x toggle-truncate-lines
+;; Source: https://stackoverflow.com/questions/16122801
+(defun my-grep-mode-hook ()
+  (setq truncate-lines t))
+(add-hook 'grep-mode-hook 'my-grep-mode-hook)
+
 ;; Provide feature
 (provide 'pigeon-general)
