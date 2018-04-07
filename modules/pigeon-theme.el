@@ -13,5 +13,8 @@
 (package-require 'rainbow-delimiters)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
+;; Set the font and its size
+(set-face-attribute 'default nil :font "Monaco-16")
+
 ;; Provide feature
 (provide 'pigeon-theme)
