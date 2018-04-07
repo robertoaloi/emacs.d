@@ -54,5 +54,11 @@
 (global-set-key "\M-[1;5C"    'forward-word)       ; Ctrl + right
 (global-set-key "\M-[1;5D"    'backward-word)      ; Ctrl + left
 
+;; Bind Option + Arrow keys
+(global-set-key (kbd "<M-up>")    'backward-paragraph) ; Option + up
+(global-set-key (kbd "<M-down>")  'forward-paragraph)  ; Option + down
+(global-set-key (kbd "<M-right>") 'forward-word)       ; Option + right
+(global-set-key (kbd "<M-left>")  'backward-word)      ; Option + left
+
 ;; Provide feature
 (provide 'pigeon-ui)
