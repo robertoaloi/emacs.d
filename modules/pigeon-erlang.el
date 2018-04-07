@@ -21,6 +21,11 @@
 (package-require 'edts)
 (require 'edts-start)
 
+;; Disable Auto Highlighting, since it conflicts with my Key Bindings
+(add-hook 'edts-mode-hook 'disable-auto-highlighting-hook)
+(defun disable-auto-highlighting-hook ()
+  (auto-highlight-symbol-mode -1))
+
 ;; Open documentation for erlang modules in a web browser
 ;; Original idea and code from @legoscia
 (defvar browse-erlang-doc-history nil)
