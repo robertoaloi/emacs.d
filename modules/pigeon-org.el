@@ -13,6 +13,10 @@
 ;; Set Agenda files
 (setq org-agenda-files (list pigeon-agenda-home-dir pigeon-agenda-work-dir))
 
+;; Set the default view to 'daily'
+;; Source: https://orgmode.org/manual/Weekly_002fdaily-agenda.html
+(setq org-agenda-span 'day)
+
 ;; Enable habit tracking
 (setq org-modules '(org-habit))
 
