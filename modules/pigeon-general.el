@@ -40,25 +40,12 @@
 (setq-default tab-width 2)
 
 ;; Highlight trailing spaces, tabs, lines > 80 characters, empty lines.
-;; Source: https://www.gnu.org/software/emacs/manual/html_node/emacs/Useless-Whitespace.html
+;; Source: https://www.emacswiki.org/emacs/WhiteSpace
 (require 'whitespace)
 (setq-default whitespace-style '(face trailing tabs lines-tail empty))
 
 (global-whitespace-mode 1)
 (whitespace-mode 1)
-
-(set-face-attribute 'whitespace-trailing nil
-                    :background "pink"
-                    :foreground nil)
-(set-face-attribute 'whitespace-line nil
-                    :background "pink"
-                    :foreground nil)
-(set-face-attribute 'whitespace-empty nil
-                    :background "pink"
-                    :foreground nil)
-
-;; Highlight current line
-(global-hl-line-mode t)
 
 ;; Save history between sessions
 (savehist-mode 1)
