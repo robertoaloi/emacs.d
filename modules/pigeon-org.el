@@ -48,19 +48,19 @@
 ;; Capture settings
 (define-key global-map "\C-cc" 'org-capture)
 (setq org-capture-templates
-      '(("t" "Todo")
+      `(("t" "Todo")
         ("th"
          "Todo at Home"
          entry
          (file+headline
-          (concat pigeon-agenda-home-dir "/todos.org") "Home")
+          ,(concat pigeon-agenda-home-dir "/todos.org") "Home")
          "* TODO %?"
          )
         ("tw"
          "Todo at Work"
          entry
          (file+headline
-          (concat pigeon-agenda-work-dir "/todos.org") "Work")
+          ,(concat pigeon-agenda-work-dir "/todos.org") "Work")
          "* TODO %?"
          )
         ("s" "Scheduled")
@@ -68,14 +68,14 @@
          "Scheduled at Home"
          entry
          (file+headline
-          (concat pigeon-agenda-home-dir "/scheduled.org") "Home")
+          ,(concat pigeon-agenda-home-dir "/scheduled.org") "Home")
          "* TODO %?\nSCHEDULED: %(format-time-string \"%<<%Y-%m-%d %a -0d>>\")\n"
          )
         ("sw"
          "Scheduled at Work"
          entry
          (file+headline
-          (concat pigeon-agenda-work-dir "/scheduled.org") "Work")
+          ,(concat pigeon-agenda-work-dir "/scheduled.org") "Work")
          "* TODO %?\nSCHEDULED: %(format-time-string \"%<<%Y-%m-%d %a -0d>>\")\n"
          )
         ("d" "Deadline")
@@ -83,14 +83,14 @@
          "Deadline at Home"
          entry
          (file+headline
-          (concat pigeon-agenda-home-dir "/deadlines.org") "Home")
+          ,(concat pigeon-agenda-home-dir "/deadlines.org") "Home")
          "* TODO %?\nDEADLINE: %(format-time-string \"%<<%Y-%m-%d %a>>\")\n"
          )
         ("dw"
          "Deadline at Work"
          entry
          (file+headline
-          (concat pigeon-agenda-work-dir "/deadlines.org") "Work")
+          ,(concat pigeon-agenda-work-dir "/deadlines.org") "Work")
          "* TODO %?\nDEADLINE: %(format-time-string \"%<<%Y-%m-%d %a>>\")\n"
          )
         ("b" "Breaks")
@@ -98,14 +98,14 @@
          "Break at Home"
          entry
          (file+headline
-          (concat pigeon-agenda-home-dir "/breaks.org") "Home")
+          ,(concat pigeon-agenda-home-dir "/breaks.org") "Home")
          "* TODO %?\n"
          )
         ("bw"
          "Break at Work"
          entry
          (file+headline
-          (concat pigeon-agenda-work-dir "/breaks.org") "Work")
+          ,(concat pigeon-agenda-work-dir "/breaks.org") "Work")
          "* TODO %?\n"
          )
         ("h" "Habit")
@@ -113,14 +113,14 @@
          "Habit at Home"
          entry
          (file+headline
-          (concat pigeon-agenda-home-dir "/habits.org") "Home")
+          ,(concat pigeon-agenda-home-dir "/habits.org") "Home")
          "* TODO %?\nSCHEDULED: %(format-time-string \"%<<%Y-%m-%d %a .+1d/3d>>\")\n:PROPERTIES:\n:STYLE: habit\n:END:\n"
          )
         ("hw"
          "Habit at Work"
          entry
          (file+headline
-          (concat pigeon-agenda-work-dir "/habits.org") "Work")
+          ,(concat pigeon-agenda-work-dir "/habits.org") "Work")
          "* TODO %?\nSCHEDULED: %(format-time-string \"%<<%Y-%m-%d %a .+1d/3d>>\")\n:PROPERTIES:\n:STYLE: habit\n:END:\n"
          )
         ))
@@ -140,6 +140,21 @@
   (org-clocktable-write-default ipos tables params))
 (setq org-agenda-clockreport-parameter-plist
       '(:link t :maxlevel 2 :fileskip0 t :indent nil :formatter pigeon-org-clocktable-notodo))
+
+;; Insert state change notes and time stamps into a drawer.
+;; t represents the default drawer, "LOGBOOK"
+(setq org-log-into-drawer t)
+
+;; active Babel languages
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((shell . t)))
+
+;; Configure some shortcuts for frequent tags
+;; SOURCES:
+;; http://sachachua.com/blog/2008/01/tagging-in-org-plus-bonus-code-for-timeclocks-and-tags/
+;; https://orgmode.org/manual/Setting-tags.html
+(setq org-tag-alist '(("meeting" . ?m)))
 
 ;; Provide feature
 (provide 'pigeon-org)
