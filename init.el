@@ -11,6 +11,7 @@
                 pigeon-clojure
                 pigeon-erlang
                 pigeon-erlang-eqc
+                ;; pigeon-erlang-lsp
                 pigeon-elixir
                 pigeon-git
                 pigeon-ido
