@@ -10,6 +10,7 @@
                 pigeon-theme
                 pigeon-erlang
                 pigeon-erlang-eqc
+                pigeon-elixir
                 pigeon-git
                 pigeon-ido
                 pigeon-markdown
