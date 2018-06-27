@@ -60,4 +60,4 @@
     (load-theme 'solarized-light t))
 
 ;; provide feature
-(provide 'pigeon-theme
+(provide 'pigeon-theme)
