@@ -8,6 +8,7 @@
                 pigeon-org
                 pigeon-ui
                 pigeon-theme
+                pigeon-clojure
                 pigeon-erlang
                 pigeon-erlang-eqc
                 pigeon-elixir
