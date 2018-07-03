@@ -15,6 +15,7 @@
                 pigeon-elixir
                 pigeon-git
                 pigeon-ido
+                pigeon-java
                 pigeon-markdown
                 pigeon-python
                 pigeon-sh
