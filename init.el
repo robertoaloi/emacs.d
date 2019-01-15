@@ -16,6 +16,7 @@
                 pigeon-git
                 pigeon-ido
                 pigeon-java
+                pigeon-json
                 pigeon-markdown
                 pigeon-python
                 pigeon-sh
