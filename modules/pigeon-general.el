@@ -13,11 +13,7 @@
 ;; Use packages
 (require 'package)
 (add-to-list 'package-archives
-             '("elpa" . "http://elpa.gnu.org/packages/") t)
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/") t)
+             '("melpa" . "https://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
 ;; Install a package only if it's not already installed
