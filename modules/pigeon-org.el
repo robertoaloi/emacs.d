@@ -18,7 +18,7 @@
 (setq org-agenda-span 'day)
 
 ;; Enable habit tracking
-(add-to-list 'org-modules 'org-habit)
+(setq org-modules '(org-habit))
 
 ;; Global Key Bindings
 (global-set-key "\C-cl" 'org-store-link)
@@ -160,7 +160,7 @@
 (server-start)
 
 ;; Add org-protocol to the list of org-modules
-(add-to-list 'org-modules 'org-protocol)
+(setq org-modules (cons 'org-protocol org-modules))
 
 ;; Provide feature
 (provide 'pigeon-org)
