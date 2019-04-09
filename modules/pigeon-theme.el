@@ -33,7 +33,7 @@
 (setq solarized-height-plus-4 1.0)
 
 (package-require 'solarized-theme)
-(load-theme 'solarized-light t)
+(load-theme 'solarized-dark t)
 
 ;; Install rainbow package, to colour HEX specs
 (package-require 'rainbow-mode)
