@@ -8,7 +8,7 @@
   "Projects which will be imported into the workspace")
 
 ;; From: https://github.com/emacs-lsp/lsp-java
-(require 'use-package)
+(package-require 'use-package)
 (package-require 'lsp-java)
 
 (use-package lsp-mode
