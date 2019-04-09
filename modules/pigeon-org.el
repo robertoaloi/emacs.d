@@ -18,7 +18,7 @@
 (setq org-agenda-span 'day)
 
 ;; Enable habit tracking
-(setq org-modules '(org-habit))
+(add-to-list 'org-modules 'org-habit)
 
 ;; Global Key Bindings
 (global-set-key "\C-cl" 'org-store-link)
@@ -155,6 +155,12 @@
 ;; http://sachachua.com/blog/2008/01/tagging-in-org-plus-bonus-code-for-timeclocks-and-tags/
 ;; https://orgmode.org/manual/Setting-tags.html
 (setq org-tag-alist '(("meeting" . ?m)))
+
+;; Ensure the emacs-server is started
+(server-start)
+
+;; Add org-protocol to the list of org-modules
+(add-to-list 'org-modules 'org-protocol)
 
 ;; Provide feature
 (provide 'pigeon-org)
