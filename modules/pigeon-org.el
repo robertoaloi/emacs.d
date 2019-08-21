@@ -162,5 +162,32 @@
 ;; Add org-protocol to the list of org-modules
 (setq org-modules (cons 'org-protocol org-modules))
 
+;; Create a pre-standup clocktable
+(defun pigeon-org-clocktable-standup ()
+  "Create a report for standup purposes"
+  (interactive)
+  (with-current-buffer (get-buffer-create "*standup*")
+    (erase-buffer)
+    (org-mode)
+    (org-create-dblock
+     (org-combine-plists
+      (list :scope (if (org-before-first-heading-p) 'file 'subtree))
+      '(
+        :maxlevel 2
+        :scope agenda
+        :tstart "<yesterday>"
+        :tend "<tomorrow>"
+        :step day
+        :compact t
+        :fileskip0 t
+        :link t
+        )
+      '(:name "clocktable"))
+     )
+    (org-dblock-update)
+    (switch-to-buffer "*standup*")
+    )
+  )
+
 ;; Provide feature
 (provide 'pigeon-org)
