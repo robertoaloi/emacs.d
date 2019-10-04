@@ -9,6 +9,7 @@
 (setq ido-everywhere t)
 (ido-mode 1)
 (ido-vertical-mode 1)
+(setq ido-vertical-define-keys 'C-n-C-p-up-and-down)
 
 ;; Enable IDO for M-x
 (package-require 'smex)
