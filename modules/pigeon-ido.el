@@ -3,10 +3,12 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Activate IDO (Interactively Do Things)
-(package-require 'ido 'ido)
+(package-require 'ido)
+(package-require 'ido-vertical-mode)
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
 (ido-mode 1)
+(ido-vertical-mode 1)
 
 ;; Enable IDO for M-x
 (package-require 'smex)
