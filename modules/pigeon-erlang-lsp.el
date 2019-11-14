@@ -5,46 +5,44 @@
 ;; Set 2 spaces for indentation
 (setq erlang-indent-level 2)
 
-;; Language Server Protocol Tests
+;; Include the Language Server Protocol Clients
 (package-require 'lsp-mode)
+
+;; Alternatively load a patched version of `lsp-mode`
+;; (add-to-list 'load-path "/Users/robert.aloi/git/github/emacs-lsp/lsp-mode")
+;; (require 'lsp-mode)
+
+;; Include the Yasnippet templating system
+(package-require 'yasnippet)
+
+;; Enable logging for lsp-mode
+(setq lsp-log-io t)
 
 ;; Enable code completion
 (package-require 'company-lsp)
+(push 'company-lsp company-backends)
 
-;; Enable and Configure Quick Help
-(package-require 'company-quickhelp)
-(eval-after-load 'company
-  '(define-key company-active-map
-     (kbd "C-c h")
-     #'company-quickhelp-manual-begin))
+;; Show line and column numbers
+(add-hook 'erlang-mode-hook 'linum-mode)
+(add-hook 'erlang-mode-hook 'column-number-mode)
 
 ;; Enable diagnostics
-;; (package-require 'exec-path-from-shell)
-;; (exec-path-from-shell-initialize)
-(package-require 'flycheck)
+(package-require 'exec-path-from-shell)
+(exec-path-from-shell-initialize)
+
+;; LSP-UI
 (package-require 'lsp-ui)
+(setq lsp-ui-sideline-enable nil)
+(setq lsp-ui-doc-enable t)
+(setq lsp-ui-doc-position 'bottom)
 
-;; Connect to an already started language server
-(lsp-define-tcp-client
- lsp-erlang-mode
- "erlang"
- (lambda () default-directory)
- '("/usr/local/opt/coreutils/libexec/gnubin/false")
- "localhost"
- 9000)
+(add-hook 'erlang-mode-hook #'lsp)
 
-;; Hooks for code completion
-(add-hook 'erlang-mode-hook 'company-mode)
-(add-hook 'erlang-mode-hook (lambda ()
-                              (push 'company-lsp company-backends)
-                              )
-          )
-(add-hook 'erlang-mode-hook 'lsp-erlang-mode-enable)
-(add-hook 'erlang-mode-hook 'company-quickhelp-mode)
+;; Override the default erlang-compile-tag to use completion-at-point
+(eval-after-load 'erlang
+  '(define-key erlang-mode-map (kbd "C-M-i") #'company-lsp))
 
-;; Hooks for diagnostics
-(add-hook 'lsp-mode-hook 'lsp-ui-mode)
-(add-hook 'erlang-mode-hook 'flycheck-mode)
+(customize-tooltip-selection-face)
 
 ;; Provide feature
 (provide 'pigeon-erlang-lsp)

@@ -49,15 +49,25 @@
 (global-set-key (kbd "M-+") 'text-scale-increase)
 (global-set-key (kbd "M--") 'text-scale-decrease)
 
+(defun customize-tooltip-selection-face ()
+  "Customize colours for the Company Selection Dropdown"
+  (set-face-attribute 'company-tooltip-selection nil
+                      :background "#00736f"
+                      :foreground "#69CABF"
+                      :weight 'bold
+                      ))
+
 ;; Define functions to switch between light and dark themes
 (defun dark ()
     "Switch to the dark version of the current theme."
     (interactive)
-    (load-theme 'solarized-dark t))
+    (load-theme 'solarized-dark t)
+    (customize-tooltip-selection-face))
 (defun light ()
     "Switch to light version of the current theme."
     (interactive)
-    (load-theme 'solarized-light t))
+    (load-theme 'solarized-light t)
+    (customize-tooltip-selection-face))
 
 ;; provide feature
 (provide 'pigeon-theme)
