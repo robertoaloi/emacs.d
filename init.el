@@ -9,16 +9,13 @@
                 pigeon-ui
                 pigeon-theme
                 pigeon-clojure
-                pigeon-erlang
-                pigeon-erlang-eqc
-                ;; pigeon-erlang-lsp
-                pigeon-elixir
+                pigeon-erlang-lsp
                 pigeon-git
                 pigeon-ido
-                pigeon-java
                 pigeon-json
                 pigeon-markdown
                 pigeon-python
                 pigeon-sh
-                pigeon-yaml))
+                pigeon-yaml
+                ))
   (require file))
