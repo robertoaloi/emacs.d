@@ -4,17 +4,22 @@
 
 ;; Define variables used in the current module
 (defvar pigeon-erlang-root-dir
-  "~/otp/18.3"
+  "~/otp/21.3.8.6+kred1"
   "Path to the Erlang installation path")
 (defvar pigeon-erlang-doc-root
   "~/otp-docs/18.3"
   "Path to the local Erlang OTP documentation (HTTP format)")
+
+(setq edts-api-server-start-retry-interval 1.0)
 
 ;; Activate official erlang-mode
 (package-require 'erlang)
 
 ;; Add Erlang to the path
 (add-to-list 'exec-path (concat pigeon-erlang-root-dir "/bin"))
+
+;; Disable proxy for EDTS
+;; (add-to-list 'url-proxy-services '("no_proxy" . "0:4587"))
 
 ;; Activate EDTS (Erlang Development Tool Suite)
 ;; Ref: https://github.com/tjarvstrand/edts
