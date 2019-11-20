@@ -11,6 +11,7 @@
                 pigeon-clojure
                 pigeon-erlang-lsp
                 pigeon-git
+                pigeon-groovy
                 pigeon-helm
                 pigeon-ido
                 pigeon-json
