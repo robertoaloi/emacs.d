@@ -63,6 +63,23 @@
           ,(concat pigeon-agenda-work-dir "/todos.org") "Work")
          "* TODO %?"
          )
+        ("b" "Bookmark")
+        ("bh"
+         "Bookmark at Home"
+         entry
+         (file+headline
+          ,(concat pigeon-agenda-home-dir "/bookmarks.org") "Home")
+         "* [[%(current-kill 0)][%^{Description}]] %^g"
+         :immediate-finish t
+         )
+        ("bw"
+         "Bookmark at Work"
+         entry
+         (file+headline
+          ,(concat pigeon-agenda-work-dir "/bookmarks.org") "Work")
+         "* [[%(current-kill 0)][%^{Description}]] %^g"
+         :immediate-finish t
+         )
         ("s" "Scheduled")
         ("sh"
          "Scheduled at Home"
@@ -93,15 +110,15 @@
           ,(concat pigeon-agenda-work-dir "/deadlines.org") "Work")
          "* TODO %?\nDEADLINE: %(format-time-string \"%<<%Y-%m-%d %a>>\")\n"
          )
-        ("b" "Breaks")
-        ("bh"
+        ("k" "Breaks")
+        ("kh"
          "Break at Home"
          entry
          (file+headline
           ,(concat pigeon-agenda-home-dir "/breaks.org") "Home")
          "* TODO %?\n"
          )
-        ("bw"
+        ("kw"
          "Break at Work"
          entry
          (file+headline
