@@ -48,5 +48,10 @@
 
 (customize-tooltip-selection-face)
 
+;; LSP Origami Mode (for folding ranges)
+(package-require 'lsp-origami)
+(add-hook 'origami-mode-hook #'lsp-origami-mode)
+(add-hook 'erlang-mode-hook #'origami-mode)
+
 ;; Provide feature
 (provide 'pigeon-erlang-lsp)
