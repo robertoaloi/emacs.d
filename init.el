@@ -18,6 +18,7 @@
                 pigeon-markdown
                 pigeon-python
                 pigeon-sh
+                pigeon-typescript
                 pigeon-yaml
                 ))
   (require file))
