@@ -11,6 +11,12 @@
   "Default Browser")
 
 ;; Use packages
+;; To refresh:
+;; M-x package-refresh-contents
+;; M-x list-packages
+;; U (show available for upgrade)
+;; x (mark for upgrade)
+;; Profit!
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/") t)
