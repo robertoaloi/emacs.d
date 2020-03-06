@@ -2,6 +2,9 @@
 ;; Erlang LSP                                               ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; Activate official erlang-mode
+(package-require 'erlang)
+
 ;; Set 2 spaces for indentation
 (setq erlang-indent-level 2)
 
