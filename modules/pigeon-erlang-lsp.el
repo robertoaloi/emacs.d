@@ -17,6 +17,7 @@
 
 ;; Include the Yasnippet templating system
 (package-require 'yasnippet)
+(yas-global-mode t)
 
 ;; Enable logging for lsp-mode
 (setq lsp-log-io t)
