@@ -13,7 +13,7 @@
 ;; Use packages
 (require 'package)
 (add-to-list 'package-archives
-             '("melpa" . "https://melpa.milkbox.net/packages/") t)
+             '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
 ;; Install a package only if it's not already installed
