@@ -53,5 +53,8 @@
 (add-hook 'origami-mode-hook #'lsp-origami-mode)
 (add-hook 'erlang-mode-hook #'origami-mode)
 
+;; Enable Code Lenses
+(setq lsp-lens-auto-enable t)
+
 ;; Provide feature
 (provide 'pigeon-erlang-lsp)
