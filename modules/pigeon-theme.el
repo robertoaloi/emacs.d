@@ -57,17 +57,31 @@
                       :weight 'bold
                       ))
 
+(defun customize-lsp-ui-doc-face-dark ()
+  "Customize colours for the LSP UI Doc widget"
+  (set-face-attribute 'lsp-ui-doc-background nil
+                      :background "#073642"
+                      ))
+
+(defun customize-lsp-ui-doc-face-light ()
+  "Customize colours for the LSP UI Doc widget"
+  (set-face-attribute 'lsp-ui-doc-background nil
+                      :background "#eee8d5"
+                      ))
+
 ;; Define functions to switch between light and dark themes
 (defun dark ()
     "Switch to the dark version of the current theme."
     (interactive)
     (load-theme 'solarized-dark t)
-    (customize-tooltip-selection-face))
+    (customize-tooltip-selection-face)
+    (customize-lsp-ui-doc-face-dark))
 (defun light ()
     "Switch to light version of the current theme."
     (interactive)
     (load-theme 'solarized-light t)
-    (customize-tooltip-selection-face))
+    (customize-tooltip-selection-face)
+    (customize-lsp-ui-doc-face-light))
 
 ;; provide feature
 (provide 'pigeon-theme)
