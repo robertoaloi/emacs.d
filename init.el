@@ -20,5 +20,6 @@
                 pigeon-sh
                 pigeon-typescript
                 pigeon-yaml
+                pigeon-docker
                 ))
   (require file))
