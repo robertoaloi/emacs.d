@@ -11,6 +11,9 @@
 ;; Include the Language Server Protocol Clients
 (package-require 'lsp-mode)
 
+;; Customize prefix for key-bindings
+(setq lsp-keymap-prefix "C-l")
+
 ;; Alternatively load a patched version of `lsp-mode`
 ;; (add-to-list 'load-path "/Users/robert.aloi/git/github/emacs-lsp/lsp-mode")
 ;; (require 'lsp-mode)
@@ -55,6 +58,12 @@
 
 ;; Enable Code Lenses
 (setq lsp-lens-auto-enable t)
+
+;; Which-key integration
+(package-require 'which-key)
+(add-hook 'erlang-mode-hook 'which-key-mode)
+(with-eval-after-load 'lsp-mode
+  (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration))
 
 ;; Provide feature
 (provide 'pigeon-erlang-lsp)
