@@ -7,7 +7,7 @@
   "~/.emacs-backups"
   "Directory where all emacs backup files will be stored")
 (defvar pigeon-default-browser
-  "google-chrome"
+  "open"
   "Default Browser")
 
 ;; Use packages
