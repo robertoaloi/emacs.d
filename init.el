@@ -16,6 +16,7 @@
                 pigeon-ido
                 pigeon-json
                 pigeon-markdown
+                pigeon-pdf
                 pigeon-python
                 pigeon-sh
                 pigeon-typescript
