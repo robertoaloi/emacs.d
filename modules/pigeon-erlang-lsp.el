@@ -49,7 +49,9 @@
 (eval-after-load 'erlang
   '(define-key erlang-mode-map (kbd "C-M-i") #'company-lsp))
 
+;; Better contrast for tooltips
 (customize-tooltip-selection-face)
+(dark)
 
 ;; LSP Origami Mode (for folding ranges)
 (package-require 'lsp-origami)
