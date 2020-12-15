@@ -17,7 +17,7 @@
                 pigeon-json
                 pigeon-markdown
                 pigeon-pdf
-                pigeon-python
+                pigeon-python-lsp
                 pigeon-sh
                 pigeon-typescript
                 pigeon-yaml
