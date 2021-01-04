@@ -41,9 +41,10 @@
 
 (add-hook 'erlang-mode-hook #'lsp)
 
-;; Override the default erlang-compile-tag to use completion-at-point
+;; Shortcut for finding modules (via LSP symbols)
 (eval-after-load 'erlang
-  '(define-key erlang-mode-map (kbd "C-M-i") #'company-lsp))
+  '(define-key erlang-mode-map (kbd "C-l") #'helm-lsp-workspace-symbol)
+  )
 
 ;; Better contrast for tooltips
 (customize-tooltip-selection-face)
