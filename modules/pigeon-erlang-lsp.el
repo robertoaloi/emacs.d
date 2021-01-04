@@ -46,10 +46,6 @@
   '(define-key erlang-mode-map (kbd "C-l") #'helm-lsp-workspace-symbol)
   )
 
-;; Better contrast for tooltips
-(customize-tooltip-selection-face)
-(dark)
-
 ;; LSP Origami Mode (for folding ranges)
 (use-package lsp-origami :ensure t)
 (add-hook 'origami-mode-hook #'lsp-origami-mode)
