@@ -8,23 +8,12 @@
   "Projects which will be imported into the workspace")
 
 ;; From: https://github.com/emacs-lsp/lsp-java
-(package-require 'use-package)
-(package-require 'lsp-java)
-
+(use-package lsp-java :ensure t)
 (use-package lsp-mode
   :ensure t
   :init (setq lsp-inhibit-message t
               lsp-eldoc-render-all nil
               lsp-highlight-symbol-at-point nil))
-
-(use-package company-lsp
-  :after  company
-  :ensure t
-  :config
-  (add-hook 'java-mode-hook (lambda () (push 'company-lsp company-backends)))
-  (setq company-lsp-enable-snippet t
-        company-lsp-cache-candidates t)
-  (push 'java-mode company-global-modes))
 
 (use-package lsp-ui
   :ensure t
