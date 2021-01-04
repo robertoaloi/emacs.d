@@ -32,6 +32,7 @@
                 pigeon-theme
                 pigeon-clojure
                 pigeon-erlang-lsp
+                pigeon-erlang-dap
                 pigeon-git
                 pigeon-groovy
                 pigeon-helm
