@@ -70,8 +70,6 @@
 
 ;; Completions
 (use-package company :ensure t)
-;; Activate completion with 2 characters (default is 3)
-;; (setq company-minimum-prefix-length 2)
 
 ;; Provide feature
 (provide 'pigeon-erlang-lsp)
