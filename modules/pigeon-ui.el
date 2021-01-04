@@ -45,7 +45,7 @@
 (setq linum-format "%4d \u2502")
 
 ;; Highlight line numbers
-(package-require 'hlinum)
+(use-package hlinum :ensure t)
 (hlinum-activate)
 
 ;; Bind Ctrl + Arrow keys (so they work inside Tmux)
