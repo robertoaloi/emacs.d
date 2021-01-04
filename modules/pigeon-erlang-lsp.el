@@ -9,7 +9,13 @@
 (setq erlang-indent-level 2)
 
 ;; Include the Language Server Protocol Clients
-(use-package lsp-mode :ensure t)
+(use-package lsp-mode
+  :ensure t
+  :bind (("M-p" . flycheck-previous-error)
+         ("M-n" . flycheck-next-error)
+         ("M-e" . flycheck-list-errors)
+         )
+  )
 
 ;; Customize prefix for key-bindings
 (setq lsp-keymap-prefix "C-l")
