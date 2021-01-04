@@ -3,7 +3,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Enable Official YAML Mode
-(package-require 'yaml-mode)
+(use-package yaml-mode :ensure t)
 
 ;; Provide feature
 (provide 'pigeon-yaml)

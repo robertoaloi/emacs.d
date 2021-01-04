@@ -10,27 +10,6 @@
   "open"
   "Default Browser")
 
-;; Use packages
-;; To refresh:
-;; M-x package-refresh-contents
-;; M-x list-packages
-;; U (show available for upgrade)
-;; x (mark for upgrade)
-;; Profit!
-(require 'package)
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/") t)
-(package-initialize)
-
-;; Install a package only if it's not already installed
-(defun package-require (pkg &optional require-name)
-  "Install a package only if it's not already installed."
-  (when (not (package-installed-p pkg))
-    (package-install pkg))
-  (if require-name
-      (require require-name)
-    (require pkg)))
-
 ;; Store backup files in a common place
 (setq backup-directory-alist `((".*" . ,pigeon-backup-dir)))
 (setq auto-save-file-name-transforms `((".*" ,pigeon-backup-dir t)))

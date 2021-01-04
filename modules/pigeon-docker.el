@@ -3,7 +3,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Activate official package
-(package-require 'dockerfile-mode)
+(use-package dockerfile-mode :ensure t)
 
 ;; Provide feature
 (provide 'pigeon-docker)

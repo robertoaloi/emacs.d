@@ -32,14 +32,14 @@
 (setq solarized-height-plus-3 1.0)
 (setq solarized-height-plus-4 1.0)
 
-(package-require 'solarized-theme)
+(use-package solarized-theme :ensure t)
 (load-theme 'solarized-dark t)
 
 ;; Install rainbow package, to colour HEX specs
-(package-require 'rainbow-mode)
+(use-package rainbow-mode :ensure t)
 
 ;; Install rainbow-delimiters package, to ease matching parentheses
-(package-require 'rainbow-delimiters)
+(use-package rainbow-delimiters :ensure t)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
 ;; Set the font and its size

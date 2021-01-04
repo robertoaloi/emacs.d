@@ -3,7 +3,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Activate official package
-(package-require 'json-mode)
+(use-package json-mode :ensure t)
 
 ;; Set 2-spaces indentation
 (add-hook 'json-mode-hook

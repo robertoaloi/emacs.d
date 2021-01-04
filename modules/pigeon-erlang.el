@@ -13,7 +13,7 @@
 (setq edts-api-server-start-retry-interval 1.0)
 
 ;; Activate official erlang-mode
-(package-require 'erlang)
+(use-package erlang :ensure t)
 
 ;; Add Erlang to the path
 (add-to-list 'exec-path (concat pigeon-erlang-root-dir "/bin"))
@@ -23,7 +23,7 @@
 
 ;; Activate EDTS (Erlang Development Tool Suite)
 ;; Ref: https://github.com/tjarvstrand/edts
-(package-require 'edts)
+(use-package edts :ensure t)
 (require 'edts-start)
 
 ;; Disable Auto Highlighting, since it conflicts with my Key Bindings

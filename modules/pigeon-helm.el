@@ -3,9 +3,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Activate Helm
-(package-require 'helm)
-
-(package-require 'helm-lsp)
+(use-package helm :ensure t)
+(use-package helm-lsp :ensure t)
 
 ;; Configure shortcuts
 (global-set-key "\C-j" 'helm-imenu) ; Ctrl + j

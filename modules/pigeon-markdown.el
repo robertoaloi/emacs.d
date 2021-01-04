@@ -3,7 +3,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Activate official markdown-mode
-(package-require 'markdown-mode)
+(use-package markdown-mode :ensure t)
 
 ;; Enable spell-checking via ispell
 ;; Require the `ispell` OS package to be installed.

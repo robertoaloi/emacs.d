@@ -4,7 +4,7 @@
 
 ;; Install magit
 ;; https://magit.vc
-(package-require 'magit)
+(use-package magit :ensure t)
 
 ;; Create a global shortcut for magit-status
 (global-set-key (kbd "C-x g") 'magit-status)

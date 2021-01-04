@@ -3,13 +3,13 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Activate official erlang-mode
-(package-require 'erlang)
+(use-package erlang :ensure t)
 
 ;; Set 2 spaces for indentation
 (setq erlang-indent-level 2)
 
 ;; Include the Language Server Protocol Clients
-(package-require 'lsp-mode)
+(use-package lsp-mode :ensure t)
 
 ;; Customize prefix for key-bindings
 (setq lsp-keymap-prefix "C-l")
@@ -19,7 +19,7 @@
 ;; (require 'lsp-mode)
 
 ;; Include the Yasnippet templating system
-(package-require 'yasnippet)
+(use-package yasnippet :ensure t)
 (yas-global-mode t)
 
 ;; Enable logging for lsp-mode
@@ -34,11 +34,11 @@
 (add-hook 'erlang-mode-hook 'column-number-mode)
 
 ;; Enable diagnostics
-(package-require 'exec-path-from-shell)
+(use-package exec-path-from-shell :ensure t)
 (exec-path-from-shell-initialize)
 
 ;; LSP-UI
-(package-require 'lsp-ui)
+(use-package lsp-ui :ensure t)
 (setq lsp-ui-sideline-enable t)
 (setq lsp-ui-doc-enable t)
 (setq lsp-ui-doc-position 'bottom)
@@ -54,7 +54,7 @@
 (dark)
 
 ;; LSP Origami Mode (for folding ranges)
-(package-require 'lsp-origami)
+(use-package lsp-origami :ensure t)
 (add-hook 'origami-mode-hook #'lsp-origami-mode)
 (add-hook 'erlang-mode-hook #'origami-mode)
 
@@ -62,7 +62,7 @@
 (setq lsp-lens-auto-enable t)
 
 ;; Which-key integration
-(package-require 'which-key)
+(use-package which-key :ensure t)
 (add-hook 'erlang-mode-hook 'which-key-mode)
 (with-eval-after-load 'lsp-mode
   (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration))

@@ -3,7 +3,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Activate official package
-(package-require 'clojure-mode)
+(use-package clojure-mode :ensure t)
 
 ;; Provide feature
 (provide 'pigeon-clojure)

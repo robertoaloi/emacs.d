@@ -3,7 +3,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Activate official package
-(package-require 'elixir-mode)
+(use-package elixir-mode :ensure t)
 
 ;; Provide feature
 (provide 'pigeon-elixir)
