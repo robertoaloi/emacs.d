@@ -25,10 +25,6 @@
 ;; Enable logging for lsp-mode
 (setq lsp-log-io t)
 
-;; Enable code completion
-(package-require 'company-lsp)
-(push 'company-lsp company-backends)
-
 ;; Show line and column numbers
 (add-hook 'erlang-mode-hook 'linum-mode)
 (add-hook 'erlang-mode-hook 'column-number-mode)
@@ -74,6 +70,11 @@
               (side            . bottom)
               (reusable-frames . visible)
               (window-height   . 0.33)))
+
+;; Completions
+(use-package company :ensure t)
+;; Activate completion with 2 characters (default is 3)
+;; (setq company-minimum-prefix-length 2)
 
 ;; Provide feature
 (provide 'pigeon-erlang-lsp)
