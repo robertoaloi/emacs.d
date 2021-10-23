@@ -75,5 +75,9 @@
 ;; Completions
 (use-package company :ensure t)
 
+;; Quick-help in completion dropdown
+(use-package company-quickhelp :ensure t)
+(company-quickhelp-mode)
+
 ;; Provide feature
 (provide 'pigeon-erlang-lsp)
