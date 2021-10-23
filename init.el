@@ -33,6 +33,7 @@
                 pigeon-clojure
                 pigeon-erlang-lsp
                 pigeon-erlang-dap
+                pigeon-elixir
                 pigeon-git
                 pigeon-groovy
                 pigeon-helm
