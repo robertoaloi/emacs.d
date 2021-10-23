@@ -14,11 +14,9 @@
   :bind (("M-p" . flycheck-previous-error)
          ("M-n" . flycheck-next-error)
          ("M-e" . flycheck-list-errors)
+         ("C-l" . helm-lsp-workspace-symbol)
          )
   )
-
-;; Customize prefix for key-bindings
-(setq lsp-keymap-prefix "C-l")
 
 ;; Alternatively load a patched version of `lsp-mode`
 ;; (add-to-list 'load-path "/Users/robert.aloi/git/github/emacs-lsp/lsp-mode")
