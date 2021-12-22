@@ -20,6 +20,13 @@ Then add  to your `.emacs` file:
 (load (concat pigeon-root "init.el"))
 ```
 
+Also copy the `early-init.el`:
+
+```
+$ cd emacs.d
+$ cp early-init.el ~/.emacs.d/early-init.el
+```
+
 ## Features
 
 My emacs.d configuration is split in modules.
