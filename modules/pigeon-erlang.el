@@ -4,7 +4,7 @@
 
 ;; Define variables used in the current module
 (defvar pigeon-erlang-root-dir
-  "~/otp/23-kred"
+  "~/homebrew/opt/erlang"
   "Path to the Erlang installation path")
 (defvar pigeon-erlang-doc-root
   "~/otp-docs/18.3"
