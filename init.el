@@ -42,6 +42,7 @@
                 pigeon-markdown
                 pigeon-pdf
                 pigeon-python-lsp
+                pigeon-rust
                 pigeon-sh
                 pigeon-typescript
                 pigeon-yaml
