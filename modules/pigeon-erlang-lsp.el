@@ -58,6 +58,9 @@
 ;; Enable Code Lenses
 (setq lsp-lens-auto-enable t)
 
+;; Enable Code Actions
+(setq lsp-ui-sideline-show-code-actions t)
+
 ;; Which-key integration
 (use-package which-key :ensure t)
 (add-hook 'erlang-mode-hook 'which-key-mode)
