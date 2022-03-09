@@ -11,7 +11,13 @@
   "Path to the directory containing your work agenda")
 
 ;; Set Agenda files
-(setq org-agenda-files (list pigeon-agenda-home-dir pigeon-agenda-work-dir))
+(setq org-agenda-files
+      `(,(concat pigeon-agenda-work-dir "/life-improvements.org")
+        ,(concat pigeon-agenda-work-dir "/to-read.org")
+        ,(concat pigeon-agenda-work-dir "/erlang-ls.org")
+        ,(concat pigeon-agenda-work-dir "/bootcamp.org")
+        ,(concat pigeon-agenda-work-dir "/scheduled.org")
+        ))
 
 ;; Set the default view to 'daily'
 ;; Source: https://orgmode.org/manual/Weekly_002fdaily-agenda.html
@@ -205,6 +211,40 @@
     (switch-to-buffer "*standup*")
     )
   )
+
+;; Agenda Customizations
+(setq org-agenda-custom-commands
+      `(("d" "Getting ready for the day!"
+         ((tags-todo "inbox-SCHEDULED<=\"<today>\""
+                     ((org-agenda-files
+                       '(,(concat pigeon-agenda-work-dir "/scheduled.org")
+                         ,(concat pigeon-agenda-work-dir "/todos.org")))
+                      (org-agenda-overriding-header "Inbox")
+                      (org-agenda-prefix-format "  ")))
+          (agenda ""
+                  ((org-agenda-span 1)
+                   (org-agenda-overriding-header "Today")))
+          (tags-todo "els-SCHEDULED<=\"<today>\""
+                     ((org-agenda-files
+                       '(,(concat pigeon-agenda-work-dir "/erlang-ls.org")))
+                      (org-agenda-overriding-header "Erlang LS")
+                      (org-agenda-prefix-format "  ")))
+          (tags-todo "bootcamp-SCHEDULED<=\"<today>\""
+                     ((org-agenda-files
+                       '(,(concat pigeon-agenda-work-dir "/bootcamp.org")))
+                      (org-agenda-overriding-header "Bootcamp")
+                      (org-agenda-prefix-format "  ")))
+          (tags-todo "lifeimprovements-SCHEDULED<=\"<today>\""
+                     ((org-agenda-files
+                       '(,(concat pigeon-agenda-work-dir "/life-improvements.org")))
+                      (org-agenda-overriding-header "Life Improvements")
+                      (org-agenda-prefix-format "  ")))
+          (tags-todo "toread-SCHEDULED<=\"<today>\""
+                     ((org-agenda-files
+                       '(,(concat pigeon-agenda-work-dir "/to-read.org")))
+                      (org-agenda-overriding-header "To Read")
+                      (org-agenda-prefix-format "  "))))
+         nil)))
 
 ;; Provide feature
 (provide 'pigeon-org)
