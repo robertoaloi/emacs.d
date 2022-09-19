@@ -59,5 +59,8 @@
   (setq truncate-lines t))
 (add-hook 'grep-mode-hook 'my-grep-mode-hook)
 
+;; Deadgrep
+(use-package deadgrep :ensure t)
+
 ;; Provide feature
 (provide 'pigeon-general)
