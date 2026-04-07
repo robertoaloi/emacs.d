@@ -27,6 +27,10 @@
 
 (global-whitespace-mode 1)
 (whitespace-mode 1)
+(defun my-org-disable-whitespace-mode ()
+  "Disable whitespace-mode in Org buffers."
+  (whitespace-mode -1))
+(add-hook 'org-mode-hook 'my-org-disable-whitespace-mode)
 
 ;; Save history between sessions
 (savehist-mode 1)
