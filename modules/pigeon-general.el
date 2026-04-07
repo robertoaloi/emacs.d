@@ -66,5 +66,14 @@
 ;; Deadgrep
 (use-package deadgrep :ensure t)
 
+;; Autosave / lock files and Cloud syncing
+(let ((lockdir (expand-file-name "lockfiles/" user-emacs-directory)))
+  (make-directory lockdir t)
+  (setq lock-file-name-transforms
+        `((".*" ,lockdir t))))
+(let ((asdir (expand-file-name "autosaves/" user-emacs-directory)))
+  (make-directory asdir t)
+  (setq auto-save-file-name-transforms `((".*" ,asdir t))))
+
 ;; Provide feature
 (provide 'pigeon-general)
